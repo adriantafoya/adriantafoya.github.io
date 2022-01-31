@@ -3,96 +3,85 @@
 * {
 	font-family: 'JetBrains Mono', monospace;
 	box-sizing: border-box;
-	color: #fff;
+	color: #ccc;
 }
 
-.cont-dom {
-	min-height: 100vh;
-	height: auto;
-	width: 100%;
-	display: grid;
-	grid-template-rows: auto 1fr auto;
+body {
+	background-color: #f3f3f3;
 }
-.cont-elementos {
-	max-width: 90%;
-	width: 700px;
+
+.cont-limite {
+	width: calc(100vw - 35px);
+	max-width: 700px;
 	margin: auto;
 }
-.link {
-	color: #F55D5D;
-}
 
-
-.header {
-	height: 50px;
-	width: 100%;
+.bloque {
 	background-color: #000;
-	box-shadow: 0px 0px 9px 1px #00000080;
-}
-.header .cont-flex {
-	height: inherit;
-	display: flex;
-	align-items: center;
-}
-.header .titulo {
-	font-size: 1.4em;
-	font-weight: 900;
-}
-.header .link-volver {
-	text-decoration: none;
-	height: 80%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-weight: 700;
-	font-size: 1.8em;
-	margin-right: .5em;
-	aspect-ratio: 1/1;
-	border-radius: .12em;
-	background-color: #ffffff50;
+	box-shadow: 0px 1px 15px #00000030;
 }
 
-.main {
-	padding: 2em 0;
+
+header {
+	height: 45px;
+	display: flex;
+	align-items: center;
+	text-align: center;
 }
-.tarjeta-proyecto {
-	height: auto;
-	width: 100%;
-	background-color: #111;
+header > div.cont-limite > span.titulo {
+	font-size: 19px;
+	font-weight: 600;
+}
+
+
+
+main {
+	min-height: calc(100vh - 45px);
+	padding: 2.4em 0;
+}
+
+main div.cont-limite > article.card {
+	padding: 1.3em 1.2em;
+	margin-bottom: 1.3em;
 	position: relative;
-	border-radius: 3px;
-	padding: .5em 1em;
-	margin-bottom: 2em;
-	box-shadow: 7px 7px 0px #00000080;
+	border-radius: .25em;
+	box-shadow: none;
 }
-.tarjeta-proyecto:last-child {
+main div.cont-limite > article.card:last-child {
 	margin-bottom: 0;
 }
-.tarjeta-proyecto:hover {
-	transform: translateX(-15px);
-	transition: transform .4s;
+main div.cont-limite > article.card:hover {
+	box-shadow: 0px 1px 15px #00000050;
+	transform: scale(1.005);
+	transition: all .1 ease-in;
 }
-.tarjeta-proyecto:blur {
-	transform: translateX(15px);
-	transition: transform .4s;
+
+main div.cont-limite > article.card > h3.titulo {
+	margin: 0;
 }
-.descripcion-proyecto, .descripcion-proyecto b {
-	color: #eee;
+main div.cont-limite > article.card > p.descripcion {
+	margin-bottom: 0;
 }
-.link-proyecto {
+
+main div.cont-limite > article.card > a.link {
 	position: absolute;
 	top: 0;
 	left: 0;
-	display: block;
 	height: 100%;
 	width: 100%;
-	border-radius: 3px;
+	border-radius: .2em;
 }
 
 
-.footer {
-	height: auto;
-	width: 100%;
-	background-color: #111;
+
+footer {
 	padding: 1em 0;
+}
+footer a {
+	color: #5B78A9;
+	text-decoration: none;
+	font-weight: bolder;
+}
+footer a:hover {
+	text-decoration: underline;
 }
